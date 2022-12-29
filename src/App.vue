@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Header />
+    <Header title="Task Tracker" />
   </div>
 </template>
 
@@ -30,8 +30,21 @@ body {
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
+  border: 2px solid steelblue;
   padding: 30px;
   border-radius: 5px;
+}
+.btn {
+  display: inline-block;
+  background: rgb(86, 9, 9);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
 }
 </style>

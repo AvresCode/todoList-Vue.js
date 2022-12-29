@@ -1,13 +1,19 @@
 <template>
   <header>
-    <h1>Task Tracker</h1>
+    <h1>{{ title }}</h1>
+    <Button />
   </header>
 </template>
 
 <script>
+import Button from "./Button.vue";
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Header",
+  props: { title: String },
+  components: {
+    Button,
+  },
 };
 </script>
 
