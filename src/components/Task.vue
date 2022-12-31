@@ -1,6 +1,9 @@
 <template>
   <div class="task">
-    <h3>{{ task.text }}</h3>
+    <h3>
+      {{ task.text }}
+      <i class="fa fa-times"></i>
+    </h3>
     <p>{{ task.day }}</p>
   </div>
 </template>
@@ -20,6 +23,12 @@ export default {
   background-color: rgb(243, 213, 213);
   margin: 10px;
   padding: 15px;
+}
+
+.task h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .task.reminder {
