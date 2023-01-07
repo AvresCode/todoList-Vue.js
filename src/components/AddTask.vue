@@ -45,7 +45,9 @@ export default {
         day: this.day,
         reminder: this.reminder,
       };
-      console.log("new task:", newTask);
+      //   console.log("new task:", newTask);
+      this.$emit("add-task", newTask);
+
       (this.text = ""), (this.day = ""), (this.reminder = false);
     },
   },
