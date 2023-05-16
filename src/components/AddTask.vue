@@ -7,7 +7,7 @@
     <div class="form-control">
       <label> Day & Time</label>
       <input
-        type="text"
+        type="date"
         v-model="day"
         name="day"
         placeholder="Add day & time"
@@ -23,11 +23,11 @@
 
 <script>
 export default {
-  name: "AddTask",
+  name: 'AddTask',
   data() {
     return {
-      text: "",
-      day: "",
+      text: '',
+      day: '',
       reminder: false,
     };
   },
@@ -35,7 +35,7 @@ export default {
     onSubmit(e) {
       e.preventDefault();
       if (!this.text) {
-        alert("Please add a task");
+        alert('Please add a task');
         return;
       }
 
@@ -46,9 +46,9 @@ export default {
         reminder: this.reminder,
       };
       //   console.log("new task:", newTask);
-      this.$emit("add-task", newTask);
+      this.$emit('add-task', newTask);
 
-      (this.text = ""), (this.day = ""), (this.reminder = false);
+      (this.text = ''), (this.day = ''), (this.reminder = false);
     },
   },
 };

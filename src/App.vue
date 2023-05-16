@@ -11,12 +11,12 @@
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import Tasks from "./components/Tasks.vue";
-import AddTask from "./components/AddTask.vue";
+import Header from './components/Header.vue';
+import Tasks from './components/Tasks.vue';
+import AddTask from './components/AddTask.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     Header,
     Tasks,
@@ -34,7 +34,7 @@ export default {
     },
     deleteTask(id) {
       // console.log("task", id);
-      if (confirm("Are you sure?")) {
+      if (confirm('Are you sure?')) {
         this.tasks = this.tasks.filter((task) => task.id !== id);
       }
     },
@@ -47,22 +47,22 @@ export default {
   },
   created() {
     this.tasks = [
-      { id: 1, text: "Cleaning", day: "Jan 3rd", reminder: false },
-      { id: 2, text: "Shopping", day: "Jan 7rd", reminder: true },
+      { id: 1, text: 'Cleaning', day: '19/05/2023', reminder: false },
+      { id: 2, text: 'Shopping', day: '23/05/2023', reminder: true },
     ];
   },
 };
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .container {
   max-width: 500px;
